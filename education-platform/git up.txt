@@ -1,0 +1,7 @@
+rm -rf .git
+git init
+git remote add origin https://github.com/ksvanquy/education-platform.git
+git add .
+git commit -m "Initial commit - full education platform"
+git branch -M main
+git push -f origin main

@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  ask-client:
+    container_name: ask-client
+    build:
+      context: ./frontend/ask-client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/ask-client:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    working_dir: /app
+    command: npm run dev

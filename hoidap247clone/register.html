@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoidap247 Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <header class="w-full bg-white shadow-sm border-b sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-1 text-2xl font-bold text-blue-800">
+                    <span class="text-yellow-500">H</span>
+                    <span>oidap247</span>
+                    <span class="text-sm font-normal text-gray-500">.com</span>
+                </a>
+                <!-- Search -->
+                <div class="flex flex-1 mx-2 md:mx-6">
+                    <input type="text" placeholder="Câu hỏi của bạn là gì?"
+                        class="flex-1 rounded-l-md px-4 py-2 bg-green-50 border border-green-200 text-sm outline-none focus:ring-2 focus:ring-green-200" />
+                    <button class="bg-yellow-400 text-white px-4 py-2 rounded-r-md font-semibold">
+                        Tìm
+                    </button>
+                </div>
+
+                <!-- Desktop Auth -->
+                <div class="hidden lg:flex items-center space-x-3 text-sm text-gray-700">
+                    <span class="flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5.121 17.804A12.013 12.013 0 0112 15c2.21 0 4.264.597 6.005 1.637M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <a href="login.html" class="hover:underline">Đăng nhập</a>
+                    </span>
+                    <span>|</span>
+                    <a href="register.html" class="hover:underline">Đăng ký</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-toggle" class="p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="lg:hidden hidden px-4 pb-3 bg-white border-t">
+                <a href="#" class="block py-2 text-gray-700 hover:underline">Đăng nhập</a>
+                <a href="#" class="block py-2 text-gray-700 hover:underline">Đăng ký</a>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 sm:px-6 md:px-12 py-12">
+            <!-- Register Page -->
+            <section class="max-w-md mx-auto mt-10 mb-16 bg-white rounded-xl shadow-md p-8 space-y-6">
+                <!-- Page title -->
+                <h1 class="text-2xl font-bold text-center text-blue-700">Tạo tài khoản mới</h1>
+
+                <!-- Register form -->
+                <form class="space-y-4">
+                    <!-- Full Name -->
+                    <div>
+                        <label for="fullname" class="block text-sm font-medium text-gray-700">Họ và tên</label>
+                        <input type="text" id="fullname" name="fullname" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" />
+                    </div>
+
+                    <!-- Username -->
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-700">Tên đăng nhập</label>
+                        <input type="text" id="username" name="username" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" />
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" />
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Mật khẩu</label>
+                        <input type="password" id="password" name="password" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" />
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div>
+                        <label for="confirm-password" class="block text-sm font-medium text-gray-700">Xác nhận mật
+                            khẩu</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" />
+                    </div>
+
+                    <!-- Register button -->
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200 font-semibold">
+                            Đăng ký
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Link to login -->
+                <p class="text-sm text-center text-gray-600">
+                    Đã có tài khoản?
+                    <a href="login.html" class="text-blue-600 hover:underline">Đăng nhập ngay</a>
+                </p>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="w-full bg-[#4a7b8d] text-white text-sm mt-auto border-t">
+            <div class="bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]">
+                <div class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Cột 1: Logo và thông tin -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-2"><span class="text-yellow-300">H</span>oidap247<span
+                                class="text-sm">.com</span></h2>
+                        <p class="mb-4">Cơ quan chủ quản: Công ty Cổ phần Công nghệ Giáo dục Thành Phát</p>
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-6 h-6"
+                                alt="Facebook">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="w-6 h-6"
+                                alt="YouTube">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" class="w-6 h-6"
+                                alt="Discord">
+                        </div>
+                        <p class="mb-1">Tải ứng dụng</p>
+                        <div class="flex gap-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                class="h-10" alt="Google Play">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                class="h-10" alt="App Store">
+                        </div>
+                    </div>
+
+                    <!-- Cột 2: Liên kết -->
+                    <div>
+                        <ul class="space-y-1">
+                            <li>○ Hướng dẫn sử dụng</li>
+                            <li>○ Điều khoản sử dụng</li>
+                            <li>○ Nội quy hoidap247</li>
+                            <li>○ Góp ý</li>
+                            <li class="flex items-center">○ Sự kiện nóng <span
+                                    class="bg-red-600 text-xs text-white px-1 ml-2 rounded">NEW</span></li>
+                            <li class="flex items-center">○ Kết quả đua top <span
+                                    class="bg-red-600 text-xs text-white px-1 ml-2 rounded">NEW</span></li>
+                            <li class="flex items-center">○ Thông báo <span
+                                    class="bg-red-600 text-xs text-white px-1 ml-2 rounded">NEW</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Cột 3: Liên hệ -->
+                    <div>
+                        <p class="mb-2">📧 <span class="underline">Inbox: m.me/hoidap247online</span></p>
+                        <p>📍 Trụ sở: Tầng 7, Tòa Intracom, số 82 Dịch Vọng Hậu, Cầu Giấy, Hà Nội.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-xs bg-[#467589] py-3">
+                Giấy phép thiết lập mạng xã hội trên mạng số 331/GP-BTTTT do Bộ Thông tin và Truyền thông cấp.
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

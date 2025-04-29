@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2023",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "@entities/*": ["entities/*"],
+      "@auth/*": ["auth/*"],
+      "@permissions/*": ["permissions/*"],
+      "@roles/*": ["roles/*"],
+      "@users/*": ["users/*"],
+      "@refresh-token/*": ["refresh-token/*"],
+      "@user-profile/*": ["user-profile/*"],
+      "@user-token/*": ["user-token/*"],
+      "@dto/*": ["dto/*"],
+      "@mail/*": ["mail/*"],
+      "@common/*": ["common/*"]
+    },
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false
+  }
+}

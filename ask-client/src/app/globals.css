@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --primary: #2563eb;      /* Main brand color - Blue */
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  
+  --secondary: #f59e0b;    /* Secondary brand color - Yellow/Orange */
+  --secondary-light: #fbbf24;
+  --secondary-dark: #d97706;
+  
+  /* Neutral Colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  --muted: #6b7280;
+  --muted-light: #9ca3af;
+  --muted-dark: #4b5563;
+  
+  /* Semantic Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  
+  /* UI Colors */
+  --border: #e5e7eb;
+  --input: #f3f4f6;
+  --ring: #93c5fd;
+  
+  /* Typography */
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  
+  /* Spacing */
+  --spacing-base: 1rem;
+  --spacing-sm: 0.5rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --muted: #9ca3af;
+    --muted-light: #d1d5db;
+    --muted-dark: #6b7280;
+    
+    --border: #1f2937;
+    --input: #1f2937;
+    --ring: #60a5fa;
+  }
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-base);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-lg); }
+h5, h6 { font-size: var(--font-size-base); }
+
+p {
+  margin-bottom: var(--spacing-base);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 15px;
+    --font-size-3xl: 26px;
+    --font-size-2xl: 22px;
+    --font-size-xl: 18px;
+    --font-size-lg: 16px;
+  }
+}
